@@ -26,3 +26,5 @@
 #include "DIT.scp"
 #include "SIT.scp"
 #include "UNT.scp"
+
+#include "teste.scp"

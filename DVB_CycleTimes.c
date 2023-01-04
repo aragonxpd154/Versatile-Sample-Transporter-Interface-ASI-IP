@@ -53,5 +53,5 @@ association TDT
 association TOT
 {
 	assocCycleTime	0x73		30000		
-}
+} 
 

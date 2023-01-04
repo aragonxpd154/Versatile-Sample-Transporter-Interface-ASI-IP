@@ -1,0 +1,169 @@
+Slot 9  2017-08-14+06:05:06.040
+
+DIAGNOSTIC CRASH
+
+Machine check
+
+Current Thread = "VBI F2" (0001801a)
+
+
+Traceback:
+
+  0x0001ec20  (    Application) -> VBI_Load_Data + 0xc0 (vbi.c)
+  0x0002017c  (    Application) -> VBI_Load_VI_Data + 0x444 (vbi.c)
+  0x00021820  (    Application) -> Vþÿühread + 0x340 (vbi.c)
+  0x01c4ac34  (         System) -> thread_startup + 0x2d208 (thread.c)
+  0x01c4ab1c  (         System) -> thread_startup + 0x2d0f0 (thread.c)
+
+Program address: 0x0001ec20
+Stack low bound: 0x008a8400
+     High bound: 0x008ac400
+        Current: 0x008ac2b0
+
+Additional information
+
+Interrupt through vector 0x0200
+
+PC         = 0x0001ec20
+MSR        = 0x00029030
+ESR        = 0x00000000
+DEAR       = 0x00000000
+
+PLB0_BESR  = 0x0c000000
+PLB0_BEAR  = 0xef400000
+POB0_BESR0 = 0x00000000
+POB0_BESR1 = 0x00000000
+POB0_BEAR  = 0x50280002
+UIC0_ER    = 0xc0000058
+UIC0_CR    = 0x00000000
+UIC0_PR    = 0xffffe000
+UIC0_TR    = 0x10000000
+UIC0_SR    = 0x3fffff8d
+
+Area around stack pointer:
+
+008ac1f0/ 008ac2d0 0007033c 00000000 e1e1e1e1
+008ac200/ 00000000 00000000 00000000 00000000
+008ac210/ 000c0000 00000200 e1e1e1e1 01c60000
+008ac220/ 00000000 01c60000 00000001 01bd4da0
+008ac230/ 008ac250 01c46140 00000001 00000004
+008ac240/ 008ac250 00000001 00000002 01bd4da0
+008ac250/ 008ac260 01c46140 00000002 00000d70
+008ac260/ 008ac340 0007033c 01c60000 e1e1e1e1
+008ac270/ 02000000 008ac2d8 008ac1f8 00000001
+008ac280/ 008ac290 00000001 00187138 01bd4da0
+008ac290/ 008ac2a0 01c46140 00187138 00000016
+008ac2a0/ 008ac380 0007033c 01bd6240 01bd2bc0
+008ac2b0/ 008ac2d0 0002017c 008ac1f8 00000000
+008ac2c0/ 00000000 00000003 0000000e 008ac2e0
+008ac2d0/ 008ac380 0002017c 000c0000 000c0000
+008ac2e0/ 02000200 02000200 02000200 02000200
+008ac2f0/ 02000200 02000200 02000200 02000200
+008ac300/ 02000200 02000200 02000200 02000200
+008ac310/ 02000200 02000200 02000200 02000200
+008ac320/ 00000000 00000003 008ac2a8 001112c0
+008ac330/ 008ac350 01bedf80 00186f28 00000000
+008ac340/ 00000008 000c0000 000c0000 000d8b58
+008ac350/ 000c0000 001a0000 185d2191 00000008
+008ac360/ 001112c0 00186f0c 9c378afe 00000000
+
+Active threads:
+
+ Parent   Thread  Children Priority  State Stack Name
+-------- -------- -------- --------  ----- ----- ----
+00000000 00010000      8        4    Wait    10K "OS_Main"
+00010000 00010001      0       24    Susp    15K "Timekeeper"
+00010000 00010002      0        4    TmOut   15K "IP Service"
+00010000 00010003      0        4    TmOut   15K "IP Devices"
+00010000 00010004      0        4    Delay   15K "TCP_Transmit"
+00010000 00010005      0        4    Wait    15K "Rlogind 0"
+00010000 00010006      0        4    Delay   15K "RloginTerm"
+00010000 00010007      0        4    Wait     2K "BSPPCI"
+00010000 00028008     19        4    Run     12K "application main"
+00028008 00028009      0        4    Wait    15K "Command thread"
+00028008 0002800a      0        4    Delay   15K "ModFailDet"
+00028008 0002800b      0        4    TmOut    8K "tAgRead"
+00028008 0002800c      0        4    TmOut    9K "tAgError"
+00028008 0002800d      0        4    TmOut    7K "ILTIMER"
+00028008 0002800e      0        4    Wait     1K "tBackTest"
+00028008 0002800f      1        4    Wait     6K "V9PSERV"
+0002800f 00028010      0        4    Wait     6K "V9SH_00000001"
+00028008 00028011      0        4    TmOut    2K "tDbLockWatch"
+00028008 00018012      0        4    Wait     7K "V9CH_00000001"
+00028008 00018013      0        4    TmOut    9K "tDbAlarm"
+00028008 00018014      0        4    TmOut   14K "tAlarmRaise"
+00028008 00018015      0        4    TmOut    2K "tStcSync"
+00028008 00028016      0        4    Wait    31K "tReference"
+00028008 00028017      0        4    Delay   31K "PWM Adjust"
+00028008 00018018      0        4    Delay   14K "Status Check"
+00028008 00018019      0       10    Run     14K "VBI F1"
+00028008 0001801a      0       10    Cur     14K "VBI F2"
+00028008 0001801b      0        4    Delay   15K "PROV"
+00028008 0001801c      0        4    Wait    15K "Assoc Dec"
+
+Scheduler trace:
+
+   ID     Action    Flags     Name
+--------  -------  --------  -------
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  setwait  c200010a  VBI F1
+00018019  clrwait  c000010a  VBI F1
+00018019  idle     c000020a  VBI F1
+0001801a  current  c000010a  VBI F2
+
+
+System Diagnostics
+------------------
+
+
+Application Diagnostics
+-----------------------
+
+
+--------
+

@@ -1,0 +1,173 @@
+# Entry type: sysDescr 
+# Entry format: octetString
+sysDescr  "NetVX"
+
+
+# Entry type: sysObjectID 
+# Entry format: OID
+sysObjectID  1.3.6.1.4.1.11268.1.1
+
+
+# Entry type: sysLocation 
+# Entry format: octetString
+sysLocation  "customer site"
+
+
+# Entry type: sysContact 
+# Entry format: octetString
+sysContact  administrator
+
+
+# Entry type: sysName 
+# Entry format: octetString
+sysName  NetVX
+
+
+# Entry type: snmpEnableAuthenTraps 
+# Entry format: integer
+snmpEnableAuthenTraps  1
+
+
+#Entry type: snmpCommunityEntry
+#Format:  snmpCommunityIndex  (text)
+#         snmpCommunityName  (text)
+#         snmpCommunitySecurityName  (text)
+#         snmpCommunityContextEngineID  (octetString)
+#         snmpCommunityContextName  (text)
+#         snmpCommunityTransportTag  (text)
+#         snmpCommunityStorageType  (nonVolatile, permanent, readOnly)
+snmpCommunityEntry  t0000000 public public localSnmpID - - nonVolatile
+snmpCommunityEntry  v1com public WRITE localSnmpID - - nonVolatile
+snmpCommunityEntry  v2com public WRITE localSnmpID - - nonVolatile
+
+
+# Entry type:  communityEntry
+# Entry format:  srCommunityAuthSnmpID      (snmpID)
+#                srCommunityName            (textOctetString)
+#                srCommunityGroupName       (textOctetString)
+#                srCommunityContextSnmpID   (snmpID)
+#                srCommunityContextName     (textOctetString)
+#                srCommunityTransportLabel  (textOctetString)
+#                srCommunityMemoryType      (integer)
+
+
+# Entry type: snmpEngineBoots 
+# Entry format: integer
+snmpEngineBoots  1
+
+
+#Entry type: usmUserEntry
+#Format:  usmUserEngineID  (octetString)
+#         usmUserName  (text)
+#         usmUserAuthProtocol  (OID)
+#         usmUserPrivProtocol  (OID)
+#         usmUserStorageType  (nonVolatile, permanent, readOnly)
+#         usmTargetTag  (text)
+#         AuthKey  (octetString)
+#         PrivKey  (octetString)
+usmUserEntry  localSnmpID V3joe 1.3.6.1.6.3.10.1.1.1 1.3.6.1.6.3.10.1.2.1 \
+    nonVolatile - - -
+
+
+#Entry type: vacmAccessEntry
+#Format:  vacmGroupName  (text)
+#         vacmAccessContextPrefix  (text)
+#         vacmAccessSecurityModel  (snmpv1, snmpv2c, snmpv2s, usm)
+#         vacmAccessSecurityLevel  (noAuthNoPriv, authNoPriv, authPriv)
+#         vacmAccessContextMatch  (exact, prefix)
+#         vacmAccessReadViewName  (text)
+#         vacmAccessWriteViewName  (text)
+#         vacmAccessNotifyViewName  (text)
+#         vacmAccessStorageType  (nonVolatile, permanent, readOnly)
+vacmAccessEntry  WRITE - snmpv1 noAuthNoPriv exact gVN sVN - nonVolatile
+vacmAccessEntry  WRITE - snmpv2c noAuthNoPriv exact gVN sVN - nonVolatile
+vacmAccessEntry  Anyone - snmpv1 noAuthNoPriv exact All All All nonVolatile
+vacmAccessEntry  Anyone - snmpv2c noAuthNoPriv exact All All All nonVolatile
+vacmAccessEntry  myV2cGroup - snmpv2c noAuthNoPriv exact All All All nonVolatile
+vacmAccessEntry  MyV3NoAuthNoPrivGroup - usm noAuthNoPriv exact - - All \
+    nonVolatile
+
+
+#Entry type: vacmSecurityToGroupEntry
+#Format:  vacmSecurityModel  (snmpv1, snmpv2c, snmpv2s, usm)
+#         vacmSecurityName  (text)
+#         vacmGroupName  (text)
+#         vacmSecurityToGroupStorageType  (nonVolatile, permanent, readOnly)
+vacmSecurityToGroupEntry  snmpv1 public WRITE nonVolatile
+vacmSecurityToGroupEntry  snmpv2c public WRITE nonVolatile
+vacmSecurityToGroupEntry  snmpv2c targetV2cCommunity myV2cGroup nonVolatile
+vacmSecurityToGroupEntry  usm V3joe MyV3NoAuthNoPrivGroup nonVolatile
+
+
+#Entry type: vacmViewTreeFamilyEntry
+#Format:  vacmViewTreeFamilyViewName  (text)
+#         vacmViewTreeFamilySubtree  (OID)
+#         vacmViewTreeFamilyMask  (octetString)
+#         vacmViewTreeFamilyType  (included, excluded)
+#         vacmViewTreeFamilyStorageType  (nonVolatile, permanent, readOnly)
+## vacmViewTreeFamilyEntry  All iso - included nonVolatile
+vacmViewTreeFamilyEntry  All 1 - included nonVolatile
+vacmViewTreeFamilyEntry  All 0.0 - included nonVolatile
+vacmViewTreeFamilyEntry  gVN 1 - included nonVolatile
+vacmViewTreeFamilyEntry  sVN 1 - included nonVolatile
+
+
+#Entry type: snmpNotifyEntry
+#Format:  snmpNotifyName  (text)
+#         snmpNotifyTag  (text)
+#         snmpNotifyType  (trap(1), inform(2))
+#         snmpNotifyStorageType  (nonVolatile, permanent, readOnly)
+snmpNotifyEntry myV3Trap whereMyV3NotificationsGo trap nonVolatile
+snmpNotifyEntry myV2Trap whereMyV2NotificationsGo trap nonVolatile
+
+
+#Entry type: snmpTargetAddrEntry
+#Format:  snmpTargetAddrName  (text)
+#         snmpTargetAddrTDomain  (snmpUDPDomain, snmpIPXDomain, etc.)
+#         snmpTargetAddrTAddress  (transport address,i.e. 192.147.142.254:0)
+#         snmpTargetAddrTimeout  (integer)
+#         snmpTargetAddrRetryCount  (integer)
+#         snmpTargetAddrTagList  (text)
+#         snmpTargetAddrParams  (text)
+#         snmpTargetAddrStorageType  (nonVolatile, permanent, readOnly)
+#         snmpTargetAddrTMask  (transport mask, i.e. 255.255.255.255:0)
+#         snmpTargetAddrMMS  (integer)
+##### change IP addr and port
+# use this one for V3
+### snmpTargetAddrEntry myV3NotifMgr 1.3.6.1.6.1.1 127.001.001.001:0 100 3 \
+###    whereMyV3NotificationsGo myV3Params nonVolatile 255.255.255.255:0 2048
+
+##### change IP addr and port
+# use this one for V2
+snmpTargetAddrEntry myV2NotifMgr 1.3.6.1.6.1.1 127.001.001.001:0 100 3 \
+   whereMyV2NotificationsGo myV2cParams nonVolatile 255.255.255.255:0 2048
+
+
+#Entry type: snmpTargetParamsEntry
+#Format:  snmpTargetParamsName  (text)
+#         snmpTargetParamsMPModel  (integer)
+#         snmpTargetParamsSecurityModel  (snmpv1, snmpv2c, snmpv2s, usm)
+#         snmpTargetParamsSecurityName  (text)
+#         snmpTargetParamsSecurityLevel  (noAuthNoPriv,authNoPriv,authPriv)
+#         snmpTargetParamsStorageType  (nonVolatile, permanent, readOnly)
+snmpTargetParamsEntry myV3Params  3 usm     V3joe              noAuthNoPriv nonVolatile
+snmpTargetParamsEntry myV2cParams 1 snmpv2c targetV2cCommunity noAuthNoPriv nonVolatile
+
+
+#Entry type: snmpNotifyFilterProfileEntry
+#Format:  snmpTargetParamsName  (text)
+#         snmpNotifyFilterProfileName  (text)
+#         snmpNotifyFilterProfileStorageType  (nonVolatile,permanent,readOnly)
+
+
+#Entry type: snmpNotifyFilterEntry
+#Format:  snmpNotifyFilterProfileName  (text)
+#         snmpNotifyFilterSubtree  (OID)
+#         snmpNotifyFilterMask  (octetString)
+#         snmpNotifyFilterType  (included, excluded)
+#         snmpNotifyFilterStorageType  (nonVolatile, permanent, readOnly)
+
+
+#Entry type: vacmContextEntry
+#Format:  vacmContextName  (textOctetString)
+#vacmContextEntry  -

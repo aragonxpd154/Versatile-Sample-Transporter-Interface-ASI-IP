@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<config>
+    <asi_output>
+        <type>1</type>
+        <mode>1</mode>
+        <bitrate>17274150</bitrate>
+        <default_flag>1</default_flag>
+        <offset>0</offset>
+        <null_pid>8191</null_pid>
+        <iip_pid>8176</iip_pid>
+    </asi_output>
+    <asi_output_single>
+        <mode>0</mode>
+        <pid>1000</pid>
+        <bitrate>20000000</bitrate>
+    </asi_output_single>
+    <tmcc>
+        <partial_reception_flag>1</partial_reception_flag>
+        <mode>3</mode>
+        <guard_interval>2</guard_interval>
+        <layerA>
+            <modulation>1</modulation>
+            <fec>1</fec>
+            <time_interleaving>3</time_interleaving>
+            <segments>1</segments>
+        </layerA>
+        <layerB>
+            <modulation>3</modulation>
+            <fec>2</fec>
+            <time_interleaving>2</time_interleaving>
+            <segments>12</segments>
+        </layerB>
+        <layerC>
+            <modulation>1</modulation>
+            <fec>1</fec>
+            <time_interleaving>3</time_interleaving>
+            <segments>0</segments>
+        </layerC>
+    </tmcc>
+    <ewbs>
+        <enable>0</enable>
+        <superimpose>
+            <pid>1000</pid>
+            <source>1</source>
+        </superimpose>
+    </ewbs>
+    <psi_info>
+        <table enabled="1">
+            <tag>PAT</tag>
+            <pid>0</pid>
+            <layer>B</layer>
+            <rate>80</rate>
+        </table>
+        <table enabled="1">
+            <tag>NIT</tag>
+            <pid>16</pid>
+            <layer>A</layer>
+            <rate>9000</rate>
+        </table>
+        <table enabled="1">
+            <tag>SDT</tag>
+            <pid>17</pid>
+            <layer>A</layer>
+            <rate>1900</rate>
+        </table>
+        <table enabled="0">
+            <tag>H-EIT</tag>
+            <pid>18</pid>
+            <layer>B</layer>
+            <rate>50000</rate>
+        </table>
+        <table enabled="0">
+            <tag>TOT</tag>
+            <pid>20</pid>
+            <layer>A</layer>
+            <rate>10000</rate>
+        </table>
+        <table enabled="0">
+            <tag>L-EIT</tag>
+            <pid>39</pid>
+            <layer>A</layer>
+            <rate>5000</rate>
+        </table>
+        <table enabled="1">
+            <tag>BIT</tag>
+            <pid>36</pid>
+            <layer>A</layer>
+            <rate>19000</rate>
+        </table>
+        <table enabled="1">
+            <tag>PMT</tag>
+            <pid from="16984">8136</pid>
+            <layer>A</layer>
+            <rate>400</rate>
+        </table>
+        <table enabled="1">
+            <tag>PMT</tag>
+            <pid from="16960">4112</pid>
+            <layer>B</layer>
+            <rate>80</rate>
+        </table>
+    </psi_info>
+    <si>
+        <pat>
+            <version>10</version>
+            <program id="16984">
+                <version>0</version>
+                <pmt_pid>8136</pmt_pid>
+                <pcr_pid>4098</pcr_pid>
+                <elementary_stream type="27">
+                    <asi>10</asi>
+                    <pid_in>49</pid_in>
+                    <pid_out>4097</pid_out>
+                    <component_tag>129</component_tag>
+                </elementary_stream>
+                <elementary_stream type="17">
+                    <asi>10</asi>
+                    <pid_in>51</pid_in>
+                    <pid_out>4099</pid_out>
+                    <profile_and_level>96</profile_and_level>
+                    <component_tag>131</component_tag>
+                </elementary_stream>
+                <elementary_stream type="6">
+                    <asi>10</asi>
+                    <pid_in>64</pid_in>
+                    <pid_out>4108</pid_out>
+                    <data_component_id>18</data_component_id>
+                    <component_tag>135</component_tag>
+                    <DMF>10</DMF>
+                    <timing>1</timing>
+                </elementary_stream>
+            </program>
+            <program id="16960">
+                <version>0</version>
+                <pmt_pid>4112</pmt_pid>
+                <pcr_pid>4113</pcr_pid>
+                <elementary_stream type="27">
+                    <asi>9</asi>
+                    <pid_in>49</pid_in>
+                    <pid_out>4113</pid_out>
+                    <component_tag>0</component_tag>
+                </elementary_stream>
+                <elementary_stream type="17">
+                    <asi>9</asi>
+                    <pid_in>51</pid_in>
+                    <pid_out>4115</pid_out>
+                    <profile_and_level>44</profile_and_level>
+                    <component_tag>16</component_tag>
+                </elementary_stream>
+                <elementary_stream type="17">
+                    <asi>9</asi>
+                    <pid_in>52</pid_in>
+                    <pid_out>4116</pid_out>
+                    <profile_and_level>44</profile_and_level>
+                    <component_tag>17</component_tag>
+                </elementary_stream>
+                <elementary_stream type="17">
+                    <asi>9</asi>
+                    <pid_in>53</pid_in>
+                    <pid_out>4117</pid_out>
+                    <profile_and_level>44</profile_and_level>
+                    <component_tag>18</component_tag>
+                </elementary_stream>
+                <elementary_stream type="17">
+                    <asi>9</asi>
+                    <pid_in>54</pid_in>
+                    <pid_out>4118</pid_out>
+                    <profile_and_level>44</profile_and_level>
+                    <component_tag>19</component_tag>
+                </elementary_stream>
+                <elementary_stream type="6">
+                    <asi>9</asi>
+                    <pid_in>64</pid_in>
+                    <pid_out>4123</pid_out>
+                    <data_component_id>8</data_component_id>
+                    <component_tag>48</component_tag>
+                    <DMF>3</DMF>
+                    <timing>1</timing>
+                </elementary_stream>
+                <elementary_stream type="6">
+                    <asi>9</asi>
+                    <pid_in>60</pid_in>
+                    <pid_out>4124</pid_out>
+                    <data_component_id>8</data_component_id>
+                    <component_tag>49</component_tag>
+                    <DMF>3</DMF>
+                    <timing>1</timing>
+                </elementary_stream>
+                <elementary_stream type="5">
+                    <asi>9</asi>
+                    <pid_in>500</pid_in>
+                    <pid_out>500</pid_out>
+                    <data_component_id>163</data_component_id>
+                </elementary_stream>
+                <elementary_stream type="11">
+                    <asi>9</asi>
+                    <pid_in>900</pid_in>
+                    <pid_out>900</pid_out>
+                    <component_tag>64</component_tag>
+                    <transaction_id>80000000</transaction_id>
+                    <carousel_id>1</carousel_id>
+                    <timeout>4294967295</timeout>
+                    <data_component_id>160</data_component_id>
+                </elementary_stream>
+            </program>
+        </pat>
+        <nit>
+            <version>19</version>
+            <network_id>530</network_id>
+            <network_name>TV GAZETA.</network_name>
+            <ts_name>TV GAZETA.</ts_name>
+            <area_code>2313</area_code>
+            <channel>22</channel>
+            <virtual_channel>4</virtual_channel>
+            <broadcasting_flag>0</broadcasting_flag>
+            <broadcasting_identifier>3</broadcasting_identifier>
+            <additional_broadcasting_id>1</additional_broadcasting_id>
+        </nit>
+        <sdt>
+            <version>21</version>
+            <service id="16984">
+                <service_name>TV GAZETA MOBILE</service_name>
+                <service_provider_name>TV GAZETA</service_provider_name>
+                <service_type>192</service_type>
+                <service_layer>1</service_layer>
+                <eit_present_following_flag>1</eit_present_following_flag>
+                <eit_schedule_flag>0</eit_schedule_flag>
+                <eit_user_defined_flag>0</eit_user_defined_flag>
+                <running_status>0</running_status>
+                <free_ca_mode>0</free_ca_mode>
+            </service>
+            <service id="16960">
+                <service_name>TV GAZETA HD</service_name>
+                <service_provider_name>TV GAZETA</service_provider_name>
+                <service_type>1</service_type>
+                <service_layer>2</service_layer>
+                <eit_present_following_flag>1</eit_present_following_flag>
+                <eit_schedule_flag>1</eit_schedule_flag>
+                <eit_user_defined_flag>0</eit_user_defined_flag>
+                <running_status>0</running_status>
+                <free_ca_mode>0</free_ca_mode>
+            </service>
+        </sdt>
+        <bit>
+            <version>13</version>
+            <broadcaster_id>255</broadcaster_id>
+            <affiliation_id>1</affiliation_id>
+            <broadcast_view_propriety>1</broadcast_view_propriety>
+        </bit>
+        <tot>
+            <region_id>3</region_id>
+            <polarity>0</polarity>
+            <localtime_offset_hours>0</localtime_offset_hours>
+            <daylight_saving_time>
+                <enabled>0</enabled>
+                <offset_hours>1</offset_hours>
+                <begin_datetime>2000-01-01 00:00:00</begin_datetime>
+                <end_datetime>2000-01-01 00:00:00</end_datetime>
+            </daylight_saving_time>
+        </tot>
+    </si>
+    <sfn>
+        <synchronization_id>0</synchronization_id>
+        <maximum_delay>6500000</maximum_delay>
+        <equipment id="1">
+            <enabled>1</enabled>
+            <renewal_flag>1</renewal_flag>
+            <static_delay_flag>0</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="2">
+            <enabled>1</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>0</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>310</time_offset>
+        </equipment>
+        <equipment id="3">
+            <enabled>1</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>0</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="4">
+            <enabled>1</enabled>
+            <renewal_flag>1</renewal_flag>
+            <static_delay_flag>0</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>1130</time_offset>
+        </equipment>
+        <equipment id="5">
+            <enabled>1</enabled>
+            <renewal_flag>1</renewal_flag>
+            <static_delay_flag>0</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>340</time_offset>
+        </equipment>
+        <equipment id="6">
+            <enabled>1</enabled>
+            <renewal_flag>1</renewal_flag>
+            <static_delay_flag>0</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>1130</time_offset>
+        </equipment>
+        <equipment id="7">
+            <enabled>1</enabled>
+            <renewal_flag>1</renewal_flag>
+            <static_delay_flag>0</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>965</time_offset>
+        </equipment>
+        <equipment id="8">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="9">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="10">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="11">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="12">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="13">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="14">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="15">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="16">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="17">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="18">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="19">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="20">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="21">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="22">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="23">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="24">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="25">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="26">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="27">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="28">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+        <equipment id="29">
+            <enabled>0</enabled>
+            <renewal_flag>0</renewal_flag>
+            <static_delay_flag>1</static_delay_flag>
+            <polarity>0</polarity>
+            <time_offset>0</time_offset>
+        </equipment>
+    </sfn>
+    <pid_mapping>
+        <layer_a>
+            <pid from="bypass">
+                <enable>1</enable>
+                <tag>BYPASS</tag>
+                <asi>9</asi>
+                <in>39</in>
+                <out>39</out>
+            </pid>
+            <pid from="bypass">
+                <enable>1</enable>
+                <tag>BYPASS</tag>
+                <asi>9</asi>
+                <in>20</in>
+                <out>20</out>
+            </pid>
+            <pid from="16984">
+                <enable>1</enable>
+                <tag>VIDEO</tag>
+                <asi>10</asi>
+                <in>49</in>
+                <out>4097</out>
+            </pid>
+            <pid from="16984">
+                <enable>1</enable>
+                <tag>AUDIO</tag>
+                <asi>10</asi>
+                <in>51</in>
+                <out>4099</out>
+            </pid>
+            <pid from="16984">
+                <enable>1</enable>
+                <tag>CC</tag>
+                <asi>10</asi>
+                <in>64</in>
+                <out>4108</out>
+            </pid>
+            <pid from="16984">
+                <enable>1</enable>
+                <tag>PCR</tag>
+                <asi>10</asi>
+                <in>50</in>
+                <out>4098</out>
+            </pid>
+        </layer_a>
+        <layer_b>
+            <pid from="bypass">
+                <enable>1</enable>
+                <tag>BYPASS</tag>
+                <asi>9</asi>
+                <in>18</in>
+                <out>18</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>VIDEO</tag>
+                <asi>9</asi>
+                <in>49</in>
+                <out>4113</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>AUDIO</tag>
+                <asi>9</asi>
+                <in>51</in>
+                <out>4115</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>AUDIO</tag>
+                <asi>9</asi>
+                <in>52</in>
+                <out>4116</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>AUDIO</tag>
+                <asi>9</asi>
+                <in>53</in>
+                <out>4117</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>AUDIO</tag>
+                <asi>9</asi>
+                <in>54</in>
+                <out>4118</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>CC</tag>
+                <asi>9</asi>
+                <in>64</in>
+                <out>4123</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>CC</tag>
+                <asi>9</asi>
+                <in>60</in>
+                <out>4124</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>AIT</tag>
+                <asi>9</asi>
+                <in>500</in>
+                <out>500</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>DSM-CC type B</tag>
+                <asi>9</asi>
+                <in>900</in>
+                <out>900</out>
+            </pid>
+            <pid from="16960">
+                <enable>1</enable>
+                <tag>PCR</tag>
+                <asi>9</asi>
+                <in>49</in>
+                <out>4113</out>
+            </pid>
+        </layer_b>
+        <layer_c/>
+    </pid_mapping>
+    <ntw_in_cfg>
+        <nin>
+            <enable>1</enable>
+            <ip_address>225.0.20.1</ip_address>
+            <port>12001</port>
+        </nin>
+        <nin>
+            <enable>1</enable>
+            <ip_address>225.0.20.2</ip_address>
+            <port>12004</port>
+        </nin>
+        <nin>
+            <enable>0</enable>
+            <ip_address>227.1.1.3</ip_address>
+            <port>1234</port>
+        </nin>
+        <nin>
+            <enable>0</enable>
+            <ip_address>227.1.1.4</ip_address>
+            <port>1234</port>
+        </nin>
+        <nin>
+            <enable>0</enable>
+            <ip_address>227.1.1.5</ip_address>
+            <port>1234</port>
+        </nin>
+        <nin>
+            <enable>0</enable>
+            <ip_address>227.1.1.6</ip_address>
+            <port>1234</port>
+        </nin>
+        <nin>
+            <enable>0</enable>
+            <ip_address>227.1.1.7</ip_address>
+            <port>1234</port>
+        </nin>
+        <nin>
+            <enable>0</enable>
+            <ip_address>227.1.1.8</ip_address>
+            <port>1234</port>
+        </nin>
+    </ntw_in_cfg>
+    <ntw_out_cfg>
+        <nout>
+            <enable>1</enable>
+            <ip_address>227.1.1.33</ip_address>
+            <mac_address>01:00:5E:01:01:21</mac_address>
+            <port>1133</port>
+        </nout>
+        <nout>
+            <enable>1</enable>
+            <ip_address>227.1.1.34</ip_address>
+            <mac_address>01:00:5E:01:01:22</mac_address>
+            <port>1134</port>
+        </nout>
+        <nout>
+            <enable>0</enable>
+            <ip_address>227.1.1.3</ip_address>
+            <mac_address>01:00:5E:01:01:03</mac_address>
+            <port>1234</port>
+        </nout>
+    </ntw_out_cfg>
+    <ntw_lo_cfg>
+        <rtp>1</rtp>
+        <package>7</package>
+        <ttl>128</ttl>
+    </ntw_lo_cfg>
+</config>

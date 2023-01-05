@@ -1,0 +1,9 @@
+WARNING: The system IP address is not set.  You won't be able to
+administer upgrade the system over your network.  To provision
+the network connection, use the following commands:
+
+cfg sys/ip/eth ipaddr=a.b.c.d wait.
+cfg sys/ip/eth ipmask=a.b.c.d
+cfg sys/ip/eth ipgate=a.b.c.d
+util ip update
+util reset sys

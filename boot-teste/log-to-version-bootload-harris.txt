@@ -1,0 +1,82 @@
+
+vr.1M> alm log
+Date/Time           Trap Id    Severity Type    Location           Description: Tag
+2072-08-26/01:56:28          0 warning  sysDeg  sys                System startup: firmware version v8-6-2.02 build 14344861
+2072-08-26/01:56:43          1 major    modFlt  slot.1             Excessive PCI errors
+2072-08-26/01:56:45          2 warning  modDeg  slot.9             Status Change: inService from booting
+
+vr.1M> alm log
+Date/Time           Trap Id    Severity Type    Location           Description: Tag
+2072-08-26/01:56:28          0 warning  sysDeg  sys                System startup: firmware version v8-6-2.02 build 14344861
+2072-08-26/01:56:43          1 major    modFlt  slot.1             Excessive PCI errors
+2072-08-26/01:56:45          2 warning  modDeg  slot.9             Status Change: inService from booting
+
+vr.1M> alm log
+Date/Time           Trap Id    Severity Type    Location           Description: Tag
+2072-08-26/01:56:28          0 warning  sysDeg  sys                System startup: firmware version v8-6-2.02 build 14344861
+2072-08-26/01:56:43          1 major    modFlt  slot.1             Excessive PCI errors
+2072-08-26/01:56:45          2 warning  modDeg  slot.9             Status Change: inService from booting
+2072-08-26/01:56:53          3 warning  modDeg  slot.6             Status Change: inService from booting
+2072-08-26/01:56:56          4 warning  modDeg  slot.5             Status Change: inService from booting
+2072-08-26/01:56:59          5 warning  modDeg  slot.5             Video picture encoding stopped: Enc-SD-5-1
+2072-08-26/01:57:05          5 clear    modDeg  slot.5             Video picture encoding stopped: Enc-SD-5-1
+2072-08-26/01:57:06          7 major    netFlt  slot.6/mux/rxIfc.1 Loss of signal: Rx-6-1
+2072-08-26/01:57:10          8 major    vidFlt  slot.5/enc.1/vid   Loss of video: Enc-SD-5-1
+2072-08-26/01:57:25          9 warning  modDeg  slot.8             Status Change: inService from booting
+2072-08-26/01:57:25         10 warning  modDeg  slot.10            Status Change: inService from booting
+2072-08-26/01:57:39         11 warning  vidDeg  slot.10/enc.1/vid  Loss of Digital Video Error: Enc-AHD-10-1
+2072-08-26/01:57:40         12 major    audFlt  slot.10/enc.1/aud.1 Audio chan 1: Loss of audio: Enc-AHD-10-1
+2072-08-26/01:57:40         13 major    vidFlt  slot.10/enc.1/vid  Loss of video: Enc-AHD-10-1
+2072-08-26/01:58:47         14 major    netFlt  slot.1/ifc.1       Ethernet link lost
+2072-08-26/02:04:48         15 warning  modDeg  slot.8             Unsuccessful at booting AMB: Enc-AHD-8-1
+2072-08-26/02:04:49         16 warning  srvDeg  sys/xc.1           Errors in service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:04:49         17 major    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:04:49         18 warning  modDeg  slot.8             Status Change: booting from inService: Unsuccessful at booti
+2072-08-26/02:04:50         19 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:04:54         15 clear    modDeg  slot.8             Unsuccessful at booting AMB: Enc-AHD-8-1
+2072-08-26/02:04:55         17 clear    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:04:59         16 clear    srvDeg  sys/xc.1           Errors in service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:05:00         19 clear    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:05:16         24 major    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:05:17         25 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:06:08         26 warning  modDeg  slot.8             Status Change: inService from booting
+2072-08-26/02:06:13         24 clear    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:06:18         25 clear    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:06:29         29 major    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+2072-08-26/02:06:29         30 warning  modDeg  slot.8             Status Change: fault from inService
+2072-08-26/02:06:29         31 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:06:31         32 warning  modDeg  slot.8             Status Change: inService from fault
+2072-08-26/02:06:35         29 clear    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+2072-08-26/02:06:40         31 clear    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:06:49         35 major    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+2072-08-26/02:06:49         36 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:06:55         35 clear    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+2072-08-26/02:07:00         36 clear    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:07:32         39 warning  modDeg  slot.8             Unsuccessful at booting AMB: Enc-AHD-8-1
+2072-08-26/02:07:33         40 major    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:07:33         41 warning  modDeg  slot.8             Status Change: booting from inService: Unsuccessful at booti
+2072-08-26/02:07:33         42 warning  srvDeg  sys/xc.1           Errors in service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:07:33         43 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:07:38         39 clear    modDeg  slot.8             Unsuccessful at booting AMB: Enc-AHD-8-1
+2072-08-26/02:07:38         40 clear    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:07:43         43 clear    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:07:43         42 clear    srvDeg  sys/xc.1           Errors in service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:08:00         48 major    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:08:01         49 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:08:52         50 warning  modDeg  slot.8             Status Change: inService from booting
+2072-08-26/02:08:58         48 clear    modFlt  slot.8             Module Booting: Unsuccessful at booting AMB
+2072-08-26/02:09:03         49 clear    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:09:10         53 major    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+2072-08-26/02:09:10         54 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:09:10         55 warning  modDeg  slot.8             Status Change: fault from inService
+2072-08-26/02:09:11         56 warning  modDeg  slot.8             Status Change: inService from fault
+2072-08-26/02:09:15         53 clear    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+2072-08-26/02:09:19         54 clear    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:09:25         59 major    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+2072-08-26/02:09:25         60 major    srvFlt  sys/xc.1           Loss of service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:09:29         61 warning  vidDeg  slot.8/enc.1/vid   Video Frame Period Error: Enc-AHD-8-1
+2072-08-26/02:09:29         62 warning  srvDeg  sys/xc.1           Errors in service 1 (slot: 8 ch 1): Enc-AHD-8-1...Dec-SD-9-1
+2072-08-26/02:09:29         63 major    vidFlt  slot.8/enc.1/vid   Loss of video: Enc-AHD-8-1
+2072-08-26/02:09:31         59 clear    modFlt  slot.8             Video encoder fault: Enc-AHD-8-1
+
+vr.1M>

@@ -117,6 +117,7 @@ macro carousel_identifier
 		    ModuleId 		16 	uimsbf;
 		    BlockSize 		16 	uimsbf;
 		    ModuleSize 		32 	uimsbf;
+			// ModuleSize 	64 uimsbf;
 		    CompressionMethod 	8 	uimsbf;
 		    OriginalSize 		32 	uimsbf;
 		    TimeOut 		8 	uimsbf;

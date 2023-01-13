@@ -95,6 +95,20 @@ macro compressed_module_descriptor
 	original_size		32		uimsbf;
 }
 
+// tag = 0x10
+macro compressed_module_descriptor{
+	descriptor_length 8 uimsbf;
+	compression_method 8 uimsbf;
+original_size 64;
+}
+
+// tag = 0x11
+macro group_link_descriptor{
+	descriptor_length 8 uimsbf;
+	est_download_time 32 uimsbf;
+	group_id 64;
+}
+
 // tag = 0x13
 macro carousel_identifier
 {

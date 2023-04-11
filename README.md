@@ -1,6 +1,15 @@
 # simple-transport-stream
 
-Estou atualmente engajado em um projeto acadêmico que tem como objetivo o desenvolvimento de um sistema de conversão e descompressão de fluxos de transporte broadcast MPEG, bem como o encapsulamento desses fluxos no protocolo IP Ethernet. Esse projeto é motivado pela crescente demanda por sistemas de transmissão de vídeo de alta qualidade e pelo crescente uso da Internet como um meio de distribuição de conteúdo audiovisual.
+<p align="center">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠶⠾⠷⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠟⠁⠀⠀⠀⠀⠉⠛⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⠶⠶⠾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⣄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣠⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢶⣄⠀⠀⠀⠀
+⠀⠀⢠⣠⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢶⣄⠀⠀
+⠀⠀⠈⠉⠛⠛⠛⠒⠶⠶⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠒⠛⠛⠉⠉⠉⠉
+</p>
+
+ Estou atualmente engajado em um projeto acadêmico que tem como objetivo o desenvolvimento de um sistema de conversão e descompressão de fluxos de transporte broadcast MPEG, bem como o encapsulamento desses fluxos no protocolo IP Ethernet. Esse projeto é motivado pela crescente demanda por sistemas de transmissão de vídeo de alta qualidade e pelo crescente uso da Internet como um meio de distribuição de conteúdo audiovisual.
 
 O projeto em questão é composto por duas principais etapas: a primeira envolve a descompressão dos fluxos de transporte broadcast MPEG, que são codificados usando os padrões MPEG-2 ou MPEG-4, e a conversão desses fluxos para um formato compatível com o protocolo IP Ethernet. A segunda etapa envolve o encapsulamento dos fluxos de transporte IP em pacotes Ethernet, permitindo assim a transmissão desses fluxos através de redes Ethernet.
 

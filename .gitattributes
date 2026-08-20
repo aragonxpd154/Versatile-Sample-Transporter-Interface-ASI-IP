@@ -1,0 +1,23 @@
+# Classificacao para o Linguist do GitHub.
+#
+# Sem isto o repositorio aparece como "Tcl", porque os arquivos de referencia
+# (scripts de definicao de tabelas, firmware de fabrica e a distribuicao Tcl
+# embarcada no equipamento) somam muito mais bytes do que o codigo do projeto.
+# O que importa para quem chega aqui e o C em src/ e include/.
+
+reference/**    linguist-vendored
+system/**       linguist-vendored
+boot-teste/**   linguist-vendored
+datasheets/**   linguist-vendored
+one-seg/**      linguist-vendored
+json-analysis/* linguist-documentation
+docs/**         linguist-documentation
+*.scp           linguist-language=Text
+
+# Normalizacao de fim de linha: o codigo usa LF, os binarios ficam intactos.
+* text=auto eol=lf
+
+*.mpg  binary
+*.ts   binary
+*.pdf  binary
+*.hex  binary

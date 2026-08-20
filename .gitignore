@@ -1,0 +1,37 @@
+# Artefatos de build
+build/
+cmake-build-*/
+*.o
+*.d
+*.a
+*.so
+*.dSYM/
+
+# Binarios gerados
+/vsti
+tests/test_crc32
+tests/test_ts
+tests/test_psi
+tests/test_rtp
+tests/test_desc
+
+# Saidas de execucao
+*.log
+relatorio*.json
+gravacao*.ts
+saida*.ts
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store

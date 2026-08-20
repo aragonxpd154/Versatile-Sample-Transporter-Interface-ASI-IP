@@ -1,0 +1,81 @@
+name: CI
+
+# O workflow anterior chamava ./configure && make, que nunca existiram neste
+# repositorio — por isso todo push aparecia como falha. Este roda o build e a
+# suite de testes de verdade.
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build e testes (${{ matrix.cc }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        cc: [gcc, clang]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Versao do compilador
+        run: ${{ matrix.cc }} --version
+
+      - name: Compilar
+        run: make CC=${{ matrix.cc }}
+
+      - name: Rodar testes
+        run: make CC=${{ matrix.cc }} test
+
+  sanitizers:
+    name: AddressSanitizer + UBSan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compilar e testar com sanitizers
+        run: make asan
+        env:
+          ASAN_OPTIONS: detect_leaks=1
+          UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+
+  cmake:
+    name: Build alternativo com CMake
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release -DVSTI_WERROR=ON
+
+      - name: Compilar
+        run: cmake --build build --parallel
+
+      - name: CTest
+        run: ctest --test-dir build --output-on-failure
+
+  static-analysis:
+    name: Analise estatica
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar cppcheck
+        run: sudo apt-get update && sudo apt-get install -y cppcheck
+
+      # --error-exitcode=1 faz o job falhar em achados reais; o conjunto de
+      # supressoes cobre avisos de estilo que nao indicam defeito.
+      - name: Rodar cppcheck
+        run: |
+          cppcheck --enable=warning,performance,portability \
+                   --error-exitcode=1 \
+                   --inline-suppr \
+                   --suppress=missingIncludeSystem \
+                   --std=c11 \
+                   -I include -I src \
+                   src/
